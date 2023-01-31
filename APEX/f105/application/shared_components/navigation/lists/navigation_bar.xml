@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="fb0d2f2c9c974197274705d80ed695043af5a902" author="(APEX22)-Generated" failOnError="false"    >
+		<n0:runOracleScript objectName="SCRIPT" objectType="APEX" ownerName="APEX22" sourceType="STRING"  >
+			<n0:source><![CDATA[prompt --application/shared_components/navigation/lists/navigation_bar
+begin
+--   Manifest
+--     LIST: Navigation Bar
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>1122334455
+,p_default_application_id=>105
+,p_default_id_offset=>0
+,p_default_owner=>'APEX22'
+);
+wwv_flow_imp_shared.create_list(
+ p_id=>wwv_flow_imp.id(4410110701777437)
+,p_name=>'Navigation Bar'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(4421530585777653)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'&APP_USER.'
+,p_list_item_link_target=>'#'
+,p_list_item_icon=>'fa-user'
+,p_list_text_02=>'has-username'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(4421958561777653)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'---'
+,p_list_item_link_target=>'separator'
+,p_parent_list_item_id=>wwv_flow_imp.id(4421530585777653)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(4422334382777654)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Sign Out'
+,p_list_item_link_target=>'&LOGOUT_URL.'
+,p_list_item_icon=>'fa-sign-out'
+,p_parent_list_item_id=>wwv_flow_imp.id(4421530585777653)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp.component_end;
+end;
+/
+]]></n0:source>
+		</n0:runOracleScript>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="16307a0c77d4e39fb44849f5b1cd206f9494b93b" author="(APEX22)-Generated" failOnError="false"    >
+		<n0:runOracleScript objectName="SCRIPT" objectType="APEX" ownerName="APEX22" sourceType="STRING"  >
+			<n0:source><![CDATA[prompt --application/shared_components/security/authorizations/administration_rights
+begin
+--   Manifest
+--     SECURITY SCHEME: Administration Rights
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>1122334455
+,p_default_application_id=>105
+,p_default_id_offset=>0
+,p_default_owner=>'APEX22'
+);
+wwv_flow_imp_shared.create_security_scheme(
+ p_id=>wwv_flow_imp.id(4413107131777509)
+,p_name=>'Administration Rights'
+,p_scheme_type=>'NATIVE_FUNCTION_BODY'
+,p_attribute_01=>'return true;'
+,p_error_message=>'Insufficient privileges, user is not an Administrator'
+,p_caching=>'BY_USER_BY_PAGE_VIEW'
+);
+wwv_flow_imp.component_end;
+end;
+/
+]]></n0:source>
+		</n0:runOracleScript>
+	</changeSet>
+</databaseChangeLog>

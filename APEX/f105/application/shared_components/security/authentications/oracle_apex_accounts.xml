@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="ea0028fdb2c485a66fd051d132cae3b74f2e3357" author="(APEX22)-Generated" failOnError="false"    >
+		<n0:runOracleScript objectName="SCRIPT" objectType="APEX" ownerName="APEX22" sourceType="STRING"  >
+			<n0:source><![CDATA[prompt --application/shared_components/security/authentications/oracle_apex_accounts
+begin
+--   Manifest
+--     AUTHENTICATION: Oracle APEX Accounts
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>1122334455
+,p_default_application_id=>105
+,p_default_id_offset=>0
+,p_default_owner=>'APEX22'
+);
+wwv_flow_imp_shared.create_authentication(
+ p_id=>wwv_flow_imp.id(4209009741776282)
+,p_name=>'Oracle APEX Accounts'
+,p_scheme_type=>'NATIVE_APEX_ACCOUNTS'
+,p_invalid_session_type=>'LOGIN'
+,p_use_secure_cookie_yn=>'N'
+,p_ras_mode=>0
+);
+wwv_flow_imp.component_end;
+end;
+/
+]]></n0:source>
+		</n0:runOracleScript>
+	</changeSet>
+</databaseChangeLog>

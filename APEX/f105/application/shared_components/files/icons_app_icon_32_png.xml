@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="0290943a5c1418c1ffe4de56e24b62bb47a65ceb" author="(APEX22)-Generated" failOnError="false"    >
+		<n0:runOracleScript objectName="SCRIPT" objectType="APEX" ownerName="APEX22" sourceType="STRING"  >
+			<n0:source><![CDATA[prompt --application/shared_components/files/icons_app_icon_32_png
+begin
+--   Manifest
+--     APP STATIC FILES: 105
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>1122334455
+,p_default_application_id=>105
+,p_default_id_offset=>0
+,p_default_owner=>'APEX22'
+);
+wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
+wwv_flow_imp.g_varchar2_table(1) := '89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7AF4000000017352474200AECE1CE90000013C494441545847ED94414AC3401486FFCC9836C69096A43B5D2828B8909C43F00E428FA60BED21442F511171D78582DA186D48';
+wwv_flow_imp.g_varchar2_table(2) := '6D2793C80C285974ECB4340A65B29CBCCCFBDE97C76F45375725FEF1B10C8031600C1803AB36902709C2A2C07B1068C5DB4A8388A7298A6C0CAB6163A3DDAE0FA0CC73145906EAFBB28998BA9C32107713D4F3B41A7F172D65803DBFA0D3B0F1CAB9BCA7';
+wwv_flow_imp.g_varchar2_table(3) := '432962427E80162158184034A72D1FA4D99CD947DAE005A8B7A5ACA97EA80D20FFEF642215AB9A8B8B0F3847B4BD83DE6D1F7618CE95A10DD04A122DCDB5015447D91F7FCA4DBF1B8DE4F1E9EE1ECA9CE332FDA8CF4015A03AA538BF3E3EC1D9C33D2E92';
+wwv_flow_imp.g_varchar2_table(4) := 'B73505109BADD2FC2706D870A8D4BCFE002272591CA37B14A164539C0F0638741C10C741FFE951EEA6EA9D1D0420AEFB6B1668E7C0DC4459B2C0001803C68031F005E0D623307105D6DD0000000049454E44AE426082';
+wwv_flow_imp_shared.create_app_static_file(
+ p_id=>wwv_flow_imp.id(4411201661777503)
+,p_file_name=>'icons/app-icon-32.png'
+,p_mime_type=>'image/png'
+,p_file_charset=>'utf-8'
+,p_file_content => wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
+);
+wwv_flow_imp.component_end;
+end;
+/
+]]></n0:source>
+		</n0:runOracleScript>
+	</changeSet>
+</databaseChangeLog>
